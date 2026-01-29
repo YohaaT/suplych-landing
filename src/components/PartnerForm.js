@@ -92,27 +92,28 @@ const PartnerForm = () => {
                                 </button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            <form action="https://formspree.io/f/xojwwade" method="POST" className="space-y-6">
+                                <input type="hidden" name="_subject" value={`${isWholesale ? 'NUEVA SOLICITUD MAYORISTA' : 'SOLICITUD ACCESO FISCAL'} - Suplych LLC`} />
                                 <div className="grid sm:grid-cols-2 gap-6">
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Nombre de Empresa *</label>
-                                        <input type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="Legal Name" />
+                                        <input name="company_name" type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="Legal Name" />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Sitio Web</label>
-                                        <input type="url" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="https://..." />
+                                        <input name="website" type="url" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="https://..." />
                                     </div>
                                 </div>
 
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Email Corporativo *</label>
-                                    <input type="email" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="sales@brand.com" />
+                                    <input name="email" type="email" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder="sales@brand.com" />
                                 </div>
 
                                 {isWholesale ? (
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Volumen de Compra Estimado (Trimestral)</label>
-                                        <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all">
+                                        <select name="purchase_volume" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all">
                                             <option>$10k - $50k</option>
                                             <option>$50k - $250k</option>
                                             <option>$250k+</option>
@@ -121,7 +122,7 @@ const PartnerForm = () => {
                                 ) : (
                                     <div>
                                         <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Departamento que solicita acceso</label>
-                                        <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all">
+                                        <select name="department" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all">
                                             <option>Ventas / Sales Department</option>
                                             <option>Compliance / Legal</option>
                                             <option>Finanzas / Accounts Receivable</option>
@@ -131,7 +132,7 @@ const PartnerForm = () => {
 
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Mensaje adicional</label>
-                                    <textarea rows="4" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder={isWholesale ? "Cuéntenos sobre sus productos y requisitos..." : "Indique el motivo de la solicitud de credenciales..."}></textarea>
+                                    <textarea name="message" rows="4" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all" placeholder={isWholesale ? "Cuéntenos sobre sus productos y requisitos..." : "Indique el motivo de la solicitud de credenciales..."}></textarea>
                                 </div>
 
                                 <button type="submit" className="w-full py-4 bg-blue-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/20">

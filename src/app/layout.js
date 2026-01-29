@@ -9,6 +9,9 @@ const inter = Inter({
 export const metadata = {
   title: "Suplych LLC",
   description: "Estrategia y Distribución Confiable",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }) {

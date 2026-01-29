@@ -29,7 +29,7 @@ const Footer = () => {
                         <h4 className="text-blue-900 font-black uppercase text-xs tracking-widest mb-6 font-sans">Corporate</h4>
                         <ul className="space-y-4 text-slate-600 font-medium">
                             <li><a href="#" className="hover:text-blue-900 transition-colors italic">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-blue-900 transition-colors italic">D&B Profile</a></li>
+                            <li><a href="https://www.dnb.com/business-directory/company-profiles.suplych_llc.97a558d09a534cb5428a224621a48629.html" target="_blank" rel="noopener noreferrer" className="hover:text-blue-900 transition-colors italic">D&B Profile</a></li>
                             <li><a href="#compliance" className="hover:text-blue-900 transition-colors italic">Brand Compliance</a></li>
                         </ul>
                     </div>
