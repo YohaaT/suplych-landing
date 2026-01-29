@@ -25,21 +25,25 @@ const Hero = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 text-blue-400 text-sm font-semibold mb-6 border border-blue-500/20">
-                            Certfied Wholesale Partner
+                            Structured Wholesale Distribution
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-                            Suplych LLC: <span className="text-blue-400">Estrategia y Distribución</span> Confiable
+                        <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+                            Structured Wholesale Distribution for <span className="text-blue-400">U.S. Market Expansion</span>
                         </h1>
-                        <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-                            Aliados estratégicos con base operativa en Florida, comprometidos con el crecimiento sostenible y la integridad de marca.
+                        <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
+                            We work selectively with brands and suppliers to build long-term, volume-based partnerships, focused on continuity and orderly execution across U.S. channels.
+                        </p>
+
+                        <p className="text-sm font-bold text-blue-400 mb-10 uppercase tracking-[0.2em]">
+                            Operationally ready: EIN • Sales Tax Certificate • D-U-N-S • Florida operational address
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
                             <a href="#contact" className="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-500 transition-all shadow-lg hover:shadow-blue-500/20 text-center">
-                                Solicitar Apertura de Cuenta
+                                Request Wholesale Onboarding
                             </a>
                             <a href="#compliance" className="px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-bold text-lg hover:bg-white/20 transition-all backdrop-blur-sm text-center">
-                                Ver Compliance de Marca
+                                View Our Compliance Approach
                             </a>
                         </div>
                     </motion.div>
@@ -48,13 +52,13 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5, duration: 1 }}
-                        className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8"
+                        className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-8 border-t border-white/10 pt-8"
                     >
                         {[
                             { label: 'Operations', value: 'Florida, USA' },
-                            { label: 'Legal Entity', value: 'Delaware' },
-                            { label: 'Market', value: 'Wholesale' },
-                            { label: 'Logistics', value: 'South FL' },
+                            { label: 'Legal Foundation', value: 'Delaware' },
+                            { label: 'Partnership', value: 'Selective' },
+                            { label: 'Execution', value: 'Channel Order' },
                         ].map((item, idx) => (
                             <div key={idx}>
                                 <p className="text-slate-500 text-sm mb-1">{item.label}</p>

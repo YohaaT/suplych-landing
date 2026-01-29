@@ -35,7 +35,7 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-blue-900 font-black uppercase text-xs tracking-widest mb-6 font-sans">Contacto</h4>
+                        <h4 className="text-blue-900 font-black uppercase text-xs tracking-widest mb-6 font-sans">Contact</h4>
                         <ul className="space-y-4 text-slate-600 font-medium">
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-blue-900 mt-0.5 shrink-0" />

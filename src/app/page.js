@@ -1,16 +1,18 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import CorporateCredentials from '@/components/CorporateCredentials';
 import ValueProposition from '@/components/ValueProposition';
+import WhySuplych from '@/components/WhySuplych';
+import ProcessSection from '@/components/ProcessSection';
+import CorporateCredentials from '@/components/CorporateCredentials';
 import ComplianceSection from '@/components/ComplianceSection';
 import LogisticsSection from '@/components/LogisticsSection';
 import PartnerForm from '@/components/PartnerForm';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Suplych LLC | Wholesale Strategic Partner | D-U-N-S Verified',
-  description: 'Certified US Wholesale Partner based in Florida with Delaware legal foundation. DUNS: 11-911-7820. Specializing in brand protection and scalable logistics.',
-  keywords: 'Suplych LLC, Wholesale, Florida Logistics, Delaware LLC, DUNS 119117820, Brand Protection, MAP Compliance',
+  title: 'Suplych LLC | Structured Wholesale Distribution for U.S. Market Expansion',
+  description: 'Selective wholesale partnerships focused on volume, continuity, and structured execution for brands expanding in the U.S. market.',
+  keywords: 'Suplych LLC, Wholesale, Florida Logistics, Delaware LLC, DUNS 119117820, Brand Protection, MAP Compliance, Market Expansion',
 };
 
 export default function Home() {
@@ -18,8 +20,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Navbar />
       <Hero />
-      <CorporateCredentials />
       <ValueProposition />
+      <WhySuplych />
+      <ProcessSection />
+      <CorporateCredentials />
       <ComplianceSection />
       <LogisticsSection />
       <PartnerForm />

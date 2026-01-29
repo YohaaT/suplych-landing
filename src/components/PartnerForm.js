@@ -46,8 +46,8 @@ const PartnerForm = () => {
                             </h2>
                             <p className="text-blue-100 text-lg mb-8">
                                 {isWholesale
-                                    ? 'Inicie una relación comercial sólida. Nuestro equipo de adquisiciones revisará su perfil en menos de 48 horas.'
-                                    : 'Solicite acceso a nuestras credenciales fiscales y certificados de reventa para procesos de auditoría y cumplimiento.'}
+                                    ? 'Start a solid business relationship. Our procurement team will review your profile in less than 48 hours.'
+                                    : 'Request access to our tax records and resale certificates for audit and compliance purposes.'}
                             </p>
                         </div>
 
@@ -82,62 +82,52 @@ const PartnerForm = () => {
                                 <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-6">
                                     <CheckCircle2 className="h-10 w-10" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Solicitud Recibida</h3>
-                                <p className="text-slate-600">Nuestro departamento correspondiente se pondrá en contacto pronto.</p>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-2">Application Received</h3>
+                                <p className="text-slate-600">Our team will be in touch shortly.</p>
                                 <button
                                     onClick={() => setSubmitted(false)}
                                     className="mt-8 text-blue-900 font-bold hover:underline"
                                 >
-                                    Enviar otra solicitud
+                                    Send another application
                                 </button>
                             </div>
                         ) : (
                             <form action="https://formspree.io/f/xojwwade" method="POST" className="space-y-6">
-                                <input type="hidden" name="_subject" value={`${isWholesale ? 'NUEVA SOLICITUD MAYORISTA' : 'SOLICITUD ACCESO FISCAL'} - Suplych LLC`} />
+                                <input type="hidden" name="_subject" value={`${isWholesale ? 'NEW WHOLESALE APPLICATION' : 'TAX ACCESS REQUEST'} - Suplych LLC`} />
                                 <div className="grid sm:grid-cols-2 gap-6">
                                     <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Nombre de Empresa *</label>
-                                        <input name="company_name" type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="Legal Name" />
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider text-blue-900">Company Name *</label>
+                                        <input name="company_name" type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="Legal Entity Name" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Sitio Web</label>
-                                        <input name="website" type="url" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="https://..." />
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider text-blue-900">Website / LinkedIn *</label>
+                                        <input name="website" type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="https://..." />
+                                    </div>
+                                </div>
+
+                                <div className="grid sm:grid-cols-2 gap-6">
+                                    <div>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider text-blue-900">Contact Name *</label>
+                                        <input name="contact_name" type="text" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="Full Name" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider text-blue-900">Business Email *</label>
+                                        <input name="email" type="email" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="sales@company.com" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Email Corporativo *</label>
-                                    <input name="email" type="email" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder="sales@brand.com" />
-                                </div>
-
-                                {isWholesale ? (
-                                    <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Volumen de Compra Estimado (Trimestral)</label>
-                                        <select name="purchase_volume" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900">
-                                            <option>$10k - $50k</option>
-                                            <option>$50k - $250k</option>
-                                            <option>$250k+</option>
-                                        </select>
-                                    </div>
-                                ) : (
-                                    <div>
-                                        <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Departamento que solicita acceso</label>
-                                        <select name="department" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900">
-                                            <option>Ventas / Sales Department</option>
-                                            <option>Compliance / Legal</option>
-                                            <option>Finanzas / Accounts Receivable</option>
-                                        </select>
-                                    </div>
-                                )}
-
-                                <div>
-                                    <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider">Mensaje adicional</label>
-                                    <textarea name="message" rows="4" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder={isWholesale ? "Cuéntenos sobre sus productos y requisitos..." : "Indique el motivo de la solicitud de credenciales..."}></textarea>
+                                    <label className="block text-sm font-bold text-slate-700 mb-2 font-sans uppercase tracking-wider text-blue-900">Message (Optional)</label>
+                                    <textarea name="message" rows="4" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-900 outline-none transition-all text-slate-900 placeholder:text-slate-400" placeholder={isWholesale ? "Tell us about your brand or products..." : "Please specify the reason for your request..."}></textarea>
                                 </div>
 
                                 <button type="submit" className="w-full py-4 bg-blue-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-blue-800 transition-all shadow-lg shadow-blue-900/20">
-                                    {isWholesale ? 'Enviar Solicitud Mayorista' : 'Solicitar Acceso Fiscal'} <Send className="h-5 w-5" />
+                                    {isWholesale ? 'Request Onboarding' : 'Request Record Access'} <Send className="h-5 w-5" />
                                 </button>
+
+                                <p className="text-center text-xs text-slate-500 mt-4 italic">
+                                    Thanks — we’ll reply within 1–2 business days with next steps.
+                                </p>
                             </form>
                         )}
                     </div>

@@ -6,23 +6,23 @@ import { motion } from 'framer-motion';
 const props = [
     {
         icon: <ShieldCheck className="h-8 w-8" />,
-        title: "Cumplimiento de MAP",
-        desc: "Rigurosa protección del Minimum Advertised Price para mantener el valor de marca."
+        title: "MAP Compliance",
+        desc: "Rigorous protection of Minimum Advertised Price to preserve brand value."
     },
     {
         icon: <Truck className="h-8 w-8" />,
-        title: "Logística Eficiente",
-        desc: "Cadena de suministro optimizada con tiempos de recepción y despacho mínimos."
+        title: "Efficient Logistics",
+        desc: "Optimized supply chain with minimal receiving and dispatch lead times."
     },
     {
         icon: <BarChart3 className="h-8 w-8" />,
-        title: "Marketing Ético",
-        desc: "Representación de marca profesional, evitando canales de venta no autorizados."
+        title: "Ethical Marketing",
+        desc: "Professional brand representation, avoiding unauthorized sales channels."
     },
     {
         icon: <Wallet className="h-8 w-8" />,
-        title: "Pagos Puntuales",
-        desc: "Solidez financiera garantizando el cumplimiento de términos de crédito y pagos."
+        title: "On-Time Payments",
+        desc: "Financial strength ensuring compliance with credit and payment terms."
     }
 ];
 
@@ -31,9 +31,9 @@ const ValueProposition = () => {
         <section id="value" className="bg-slate-50">
             <div className="section-container">
                 <div className="text-center mb-16 px-4">
-                    <h2 className="text-4xl font-bold text-slate-900 mb-4">Nuestra Propuesta de Valor</h2>
+                    <h2 className="text-4xl font-bold text-slate-900 mb-4">Our Value Proposition</h2>
                     <p className="text-slate-600 max-w-2xl mx-auto">
-                        No solo distribuimos productos; protegemos y potenciamos su marca en el mercado estadounidense.
+                        We don't just distribute products; we protect and scale your brand in the U.S. market.
                     </p>
                 </div>
 

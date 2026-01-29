@@ -7,8 +7,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Suplych LLC",
-  description: "Estrategia y Distribución Confiable",
+  title: "Suplych LLC | Wholesale & Distribution Partner",
+  description: "Selective wholesale partnerships focused on volume, continuity, and orderly brand execution in the U.S.",
   icons: {
     icon: "/favicon.png",
   },

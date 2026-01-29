@@ -9,16 +9,16 @@ const LogisticsSection = () => {
             <div className="section-container">
                 <div className="flex flex-col lg:flex-row gap-16 items-center">
                     <div className="flex-1">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-6 italic border-l-4 border-blue-900 pl-4">Excelencia Operativa</h2>
-                        <p className="text-slate-600 mb-8 leading-relaxed">
-                            Optimizamos la gestión de almacenes mediante sistemas de control de inventario avanzados y protocolos de recepción rigurosos. Nuestra capacidad de absorción logística permite escalar volúmenes de compra sin comprometer los tiempos de procesamiento y despacho.
+                        <h2 className="text-3xl font-bold text-slate-900 mb-6 italic border-l-4 border-blue-900 pl-4 tracking-tight">Reliable replenishment and inventory discipline</h2>
+                        <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                            Operational workflows designed for continuity. We ensure your products are always in stock with high forecast accuracy and disciplined inventory management.
                         </p>
 
                         <div className="space-y-6">
                             {[
-                                { label: 'Indice de Precisión en Inventario (Inventory Accuracy Index)', value: 99.8, color: 'bg-blue-600' },
-                                { label: 'Forecast Accuracy (Proyectado)', value: 94.5, color: 'bg-blue-400' },
-                                { label: 'Cumplimiento de Lead Time (On-Time In-Full)', value: 99.2, color: 'bg-slate-800' },
+                                { label: 'Inventory Discipline Index', value: 99.8, color: 'bg-blue-600' },
+                                { label: 'Forecast Alignment', value: 94.5, color: 'bg-blue-400' },
+                                { label: 'On-Time Continuous Fill (OTIF)', value: 99.2, color: 'bg-slate-800' },
                             ].map((stat, i) => (
                                 <div key={i}>
                                     <div className="flex justify-between mb-2">
@@ -42,8 +42,8 @@ const LogisticsSection = () => {
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-2xl">
                                 <Globe2 className="h-10 w-10 mb-6 text-blue-400" />
-                                <h4 className="text-xl font-bold mb-2">Omnicanalidad Controlada</h4>
-                                <p className="text-slate-400 text-sm italic">Gestión de stock centralizada para prevenir sobreventas y rupturas de inventario.</p>
+                                <h4 className="text-xl font-bold mb-2">Controlled Omnichannel</h4>
+                                <p className="text-slate-400 text-sm italic">Centralized stock management to prevent overselling and inventory gaps.</p>
                             </div>
                             <div className="bg-blue-50 p-8 rounded-3xl border border-blue-100 flex flex-col justify-center">
                                 <TrendingUp className="h-10 w-10 mb-6 text-blue-900" />
@@ -56,8 +56,8 @@ const LogisticsSection = () => {
                                     <Truck className="h-8 w-8 text-blue-900" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900">Manejo de Carga Especializada</h4>
-                                    <p className="text-slate-500 text-sm italic">Experiencia en manejo de productos electrónicos y bienes de consumo de alta rotación.</p>
+                                    <h4 className="font-bold text-slate-900">Specialized Cargo Handling</h4>
+                                    <p className="text-slate-500 text-sm italic">Expertise in handling electronics and high-turnover consumer goods.</p>
                                 </div>
                             </div>
                         </div>
