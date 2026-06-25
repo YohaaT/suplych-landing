@@ -1,7 +1,8 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -10,10 +11,14 @@ const Navbar = () => {
     <nav className="fixed w-full z-50 bg-slate-950/95 backdrop-blur-md border-b border-amber-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-amber-400 rounded-lg flex items-center justify-center">
-              <Sparkles className="h-6 w-6 text-slate-950 font-bold" />
-            </div>
+          <div className="flex items-center gap-2">
+            <Image
+              src="/suplych-logo.svg"
+              alt="Suplych"
+              width={40}
+              height={40}
+              priority
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent tracking-tight">SUPLYCH</span>
           </div>
 

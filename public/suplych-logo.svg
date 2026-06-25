@@ -1,0 +1,45 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F59E0B;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Círculo base azul -->
+  <circle cx="100" cy="100" r="95" fill="url(#logoGradient)" stroke="none"/>
+
+  <!-- Elemento decorativo superior (botella/frasco estilizado) -->
+  <g transform="translate(100, 100)">
+    <!-- Tapa del frasco -->
+    <rect x="-12" y="-45" width="24" height="8" rx="2" fill="url(#accentGradient)"/>
+
+    <!-- Cuello del frasco -->
+    <path d="M -15 -37 L -12 -25 L 12 -25 L 15 -37 Z" fill="url(#accentGradient)" opacity="0.9"/>
+
+    <!-- Cuerpo del frasco (belleza) -->
+    <ellipse cx="0" cy="-8" rx="22" ry="25" fill="#FFFFFF" opacity="0.15"/>
+
+    <!-- Líneas decorativas (movimiento/energía) -->
+    <path d="M -35 -15 Q -45 -5 -40 5" stroke="url(#accentGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 35 -15 Q 45 -5 40 5" stroke="url(#accentGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Centro brillante (sparkle) -->
+    <circle cx="0" cy="0" r="4" fill="url(#accentGradient)"/>
+    <circle cx="0" cy="0" r="2" fill="#FFFFFF"/>
+
+    <!-- Detalles de brillo -->
+    <line x1="-6" y1="0" x2="-10" y2="0" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="6" y1="0" x2="10" y2="0" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="-6" x2="0" y2="-10" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <line x1="0" y1="6" x2="0" y2="10" stroke="url(#accentGradient)" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Borde exterior sutil -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#accentGradient)" stroke-width="2" opacity="0.3"/>
+</svg>

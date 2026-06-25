@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjetas de Presentación - Suplych</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1e293b;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            grid-auto-rows: max-content;
+        }
+
+        .business-card {
+            width: 355px;
+            height: 204px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            border: 1px solid rgba(191, 144, 0, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+            page-break-after: always;
+        }
+
+        .business-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .business-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .card-logo {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #3B82F6, #1E40AF);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+
+        .card-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-brand-name {
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #60A5FA, #FBBF24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-brand-tagline {
+            font-size: 10px;
+            color: #CBD5E1;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .card-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(251, 191, 36, 0.2), transparent);
+            margin: 10px 0;
+        }
+
+        .card-footer {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 9px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #E2E8F0;
+        }
+
+        .contact-label {
+            color: #94A3B8;
+            width: 50px;
+        }
+
+        .contact-value {
+            color: #F1F5F9;
+            font-weight: 500;
+        }
+
+        .icon {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+        }
+
+        .position {
+            font-size: 10px;
+            color: #FBBF24;
+            font-weight: 600;
+            margin-top: 5px;
+            letter-spacing: 0.5px;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                gap: 0;
+                grid-template-columns: repeat(2, 1fr);
+                page-break-after: always;
+            }
+
+            .business-card {
+                margin: 0;
+                border: 1px solid #CBD5E1;
+            }
+
+            .business-card:nth-child(2) {
+                margin-left: 20px;
+            }
+
+            .business-card:nth-child(odd) {
+                margin-right: 10px;
+            }
+        }
+
+        .print-info {
+            background: #1e3a5f;
+            border: 1px solid #3B82F6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 13px;
+            grid-column: 1 / -1;
+        }
+
+        .print-info h3 {
+            color: #60A5FA;
+            margin-bottom: 8px;
+        }
+
+        .print-info ul {
+            list-style-position: inside;
+            line-height: 1.6;
+        }
+
+        .print-info li {
+            color: #E2E8F0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="print-info">
+            <h3>📋 Instrucciones de Impresión</h3>
+            <ul>
+                <li><strong>Papel:</strong> Tarjetas de presentación (3.5" x 2") o papel de 350g</li>
+                <li><strong>Tamaño:</strong> Cada tarjeta es exactamente 355px x 204px (3.5" x 2")</li>
+                <li><strong>Imprimir:</strong> 2 tarjetas por página | Presiona Ctrl+P | Márgenes: 0mm</li>
+                <li><strong>Color:</strong> Asegúrate de que "Gráficos de fondo" esté habilitado</li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta 1 -->
+        <div class="business-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-logo">S</div>
+                    <div class="card-brand">
+                        <div class="card-brand-name">SUPLYCH</div>
+                        <div class="card-brand-tagline">Beauty Wholesale</div>
+                    </div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-footer">
+                    <div class="position">FOUNDER & CEO</div>
+                    <div class="contact-item">
+                        <span class="contact-label">📧</span>
+                        <span class="contact-value">admin@suplych.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📱</span>
+                        <span class="contact-value">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">🌐</span>
+                        <span class="contact-value">suplych.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="business-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-logo">S</div>
+                    <div class="card-brand">
+                        <div class="card-brand-name">SUPLYCH</div>
+                        <div class="card-brand-tagline">Beauty Wholesale</div>
+                    </div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-footer">
+                    <div class="position">FOUNDER & CEO</div>
+                    <div class="contact-item">
+                        <span class="contact-label">📧</span>
+                        <span class="contact-value">admin@suplych.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📱</span>
+                        <span class="contact-value">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">🌐</span>
+                        <span class="contact-value">suplych.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="business-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-logo">S</div>
+                    <div class="card-brand">
+                        <div class="card-brand-name">SUPLYCH</div>
+                        <div class="card-brand-tagline">Beauty Wholesale</div>
+                    </div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-footer">
+                    <div class="position">FOUNDER & CEO</div>
+                    <div class="contact-item">
+                        <span class="contact-label">📧</span>
+                        <span class="contact-value">admin@suplych.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📱</span>
+                        <span class="contact-value">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">🌐</span>
+                        <span class="contact-value">suplych.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="business-card">
+            <div class="card-content">
+                <div class="card-header">
+                    <div class="card-logo">S</div>
+                    <div class="card-brand">
+                        <div class="card-brand-name">SUPLYCH</div>
+                        <div class="card-brand-tagline">Beauty Wholesale</div>
+                    </div>
+                </div>
+                <div class="card-divider"></div>
+                <div class="card-footer">
+                    <div class="position">FOUNDER & CEO</div>
+                    <div class="contact-item">
+                        <span class="contact-label">📧</span>
+                        <span class="contact-value">admin@suplych.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">📱</span>
+                        <span class="contact-value">+1 (555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">🌐</span>
+                        <span class="contact-value">suplych.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

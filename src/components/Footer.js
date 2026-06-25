@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
-import { Sparkles, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -11,10 +12,13 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-blue-400 to-amber-400 rounded-lg flex items-center justify-center">
-                                <Sparkles className="h-6 w-6 text-slate-950 font-bold" />
-                            </div>
+                        <div className="flex items-center gap-2 mb-4">
+                            <Image
+                                src="/suplych-logo.svg"
+                                alt="Suplych"
+                                width={40}
+                                height={40}
+                            />
                             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-amber-400 bg-clip-text text-transparent">SUPLYCH</span>
                         </div>
                         <p className="text-slate-400 text-sm">
