@@ -1,18 +1,13 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import ValueProposition from '@/components/ValueProposition';
-import WhySuplych from '@/components/WhySuplych';
-import ProcessSection from '@/components/ProcessSection';
-import CorporateCredentials from '@/components/CorporateCredentials';
-import ComplianceSection from '@/components/ComplianceSection';
-import LogisticsSection from '@/components/LogisticsSection';
-import PartnerForm from '@/components/PartnerForm';
+import BrandsShowcase from '@/components/BrandsShowcase';
+import B2BForm from '@/components/B2BForm';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Suplych LLC | Structured Wholesale Distribution for U.S. Market Expansion',
-  description: 'Selective wholesale partnerships focused on volume, continuity, and structured execution for brands expanding in the U.S. market.',
-  keywords: 'Suplych LLC, Wholesale, Florida Logistics, Delaware LLC, DUNS 119117820, Brand Protection, MAP Compliance, Market Expansion',
+  title: 'Suplych | Distribución Mayorista Beauty & Personal Care Premium',
+  description: 'Acceso a 100+ marcas premium de belleza, cuidado personal y hair care. Precios mayoristas competitivos para retailers y salones.',
+  keywords: 'Suplych, Mayorista beauty, Beauty wholesale, Personal care, Hair care, Distribuidora belleza',
 };
 
 export default function Home() {
@@ -20,13 +15,8 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Navbar />
       <Hero />
-      <ValueProposition />
-      <WhySuplych />
-      <ProcessSection />
-      <CorporateCredentials />
-      <ComplianceSection />
-      <LogisticsSection />
-      <PartnerForm />
+      <BrandsShowcase />
+      <B2BForm />
       <Footer />
     </main>
   );
